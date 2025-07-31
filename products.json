@@ -1,0 +1,46 @@
+[
+  {
+    "faceShape": "Oval",
+    "glass": [
+      { "type": "Rectangle", "image": "assets/Rectangle.jpg" },
+      { "type": "Aviator", "image": "assets/Aviator.jpg" }
+    ]
+  },
+  {
+    "faceShape": "Square",
+    "glass": [
+      { "type": "Browline", "image": "assets/Browline.jpg" },
+      { "type": "Cat Eye", "image": "assets/CatEye.jpg" },
+      { "type": "Circle", "image": "assets/Circle.jpg" }
+    ]
+  },
+  {
+    "faceShape": "Circle",
+    "glass": [
+      { "type": "Rectangle", "image": "assets/Rectangle.jpg" },
+      { "type": "Square", "image": "assets/Square.jpg" }
+    ]
+  },
+  {
+    "faceShape": "Heart",
+    "glass": [
+      { "type": "Rectangle", "image": "assets/Rectangle.jpg" },
+      { "type": "Circle", "image": "assets/Circle.jpg" }
+    ]
+  },
+  {
+    "faceShape": "Diamond",
+    "glass": [
+      { "type": "Circle", "image": "assets/Circle.jpg" },
+      { "type": "Oval", "image": "assets/Oval.jpg" },
+      { "type": "Cat Eye", "image": "assets/CatEye.jpg" }
+    ]
+  },
+  {
+    "faceShape": "Triangle",
+    "glass": [
+      { "type": "Aviator", "image": "assets/Aviator.jpg" },
+      { "type": "Rectangle", "image": "assets/Rectangle.jpg" }
+    ]
+  }
+]

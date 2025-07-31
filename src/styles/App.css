@@ -1,0 +1,135 @@
+.appContainer {
+  font-family: 'Lora', sans-serif;
+  background-color: white;
+}
+
+.banner {
+  background: linear-gradient(90deg, #DBE6F6, #C5796D);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 60px 50px;
+  gap: 40px;
+  border-radius: 20px;
+  margin: 30px;
+}
+
+.text {
+  max-width: 550px;
+}
+
+.heading {
+  font-size: 52px;
+  font-weight: 700;
+  margin: 0 0 15px 0;
+  color: #212529;
+  line-height: 1.2;
+}
+
+.subheading {
+  font-size: 18px;
+  color: #495057;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.button {
+  padding: 15px 30px;
+  border-radius: 50px;
+  border: none;
+  color: #fff;
+  background: #000;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.bannerImg {
+  max-width: 450px;
+  max-height: 450px;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px black;
+}
+
+.box {
+  margin: 60px auto;
+  padding: 40px;
+  max-width: 900px;
+  background-color: #fff;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+.boxHeading {
+  font-size: 28px;
+  font-weight: 600;
+  color: #343a40;
+  margin-bottom: 25px;
+}
+
+.finderControls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.select {
+  font-family: 'Poppins', sans-serif;
+  padding: 12px 18px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  background-color: #f8f9fa;
+  min-width: 250px;
+}
+
+.findButton {
+  padding: 13px 25px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.bottomImageContainer {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 60px 0 80px 0;
+}
+
+.glassItem {
+  text-align: center;
+}
+
+.bottomImage {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.bottomImage:hover {
+  transform: scale(1.05);
+}
+
+.glassType {
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+.infoImageContainer {
+  text-align: center;
+  margin: 20px 0;
+}
+.infoImage {
+  width: 900px;
+  max-width: 90%;
+  border-radius: 10px;
+}
