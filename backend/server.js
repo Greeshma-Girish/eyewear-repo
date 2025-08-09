@@ -24,17 +24,31 @@ const ProductSchema = new mongoose.Schema({
 
 const Product = mongoose.model("Product", ProductSchema);
 
-app.get("/products", async (req, res) => {
+app.get("/", (req, res) => {
+  res.json({ message: "Welcome to Eyewear API" });
+});
+
+app.get("/api/products", async (req, res) => {
   const { faceShape } = req.query;
   try {
-    const products = await Product.find({ faceShape });
-    res.json(products);
+    if (faceShape) {
+      // Case insensitive search for specific face shape
+      const products = await Product.find({ 
+        faceShape: { $regex: new RegExp(faceShape, 'i') }
+      });
+      console.log('Found products:', products); // Debug log
+      res.json(products);
+    } else {
+      // If no face shape specified, return all products
+      const products = await Product.find();
+      console.log('All products:', products); // Debug log
+      res.json(products);
+    }
   } catch (err) {
-    console.error(err);
+    console.error("Error:", err);
     res.status(500).send("Error fetching products");
   }
 });
-
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT,"0.0.0.0", () => {

@@ -30,10 +30,17 @@ function Home() {
       const res = await axios.get(
         `/api/products?faceShape=${faceShape}`
       );
-      setGlass(res.data[0].glass);  
-      toast.success("Glasses found");
+      console.log('API Response:', res.data); // Debug log
+      if (res.data && res.data.length > 0) {
+        setGlass(res.data[0].glass);
+        toast.success("Glasses found");
+      } else {
+        setGlass([]);
+        toast.info("No glasses found for this face shape");
+      }
     } catch (err) {
       console.error("Error fetching products:", err);
+      toast.error("Error fetching glasses");
       setGlass([]);
     }
   };
