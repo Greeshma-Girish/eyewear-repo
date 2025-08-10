@@ -1,20 +1,18 @@
+version: '3.8'
+
 services:
   backend:
     build: ./backend
     ports:
       - "5000:5000"
-    volumes:
-      - ./backend:/app
     environment:
-      - NODE_ENV=development
+      - NODE_ENV=production
     restart: always
 
   frontend:
     build: 
       context: .
       dockerfile: src/Dockerfile
-    volumes:
-      - ./build:/usr/share/nginx/html
     environment:
       - NODE_ENV=production
     restart: always
