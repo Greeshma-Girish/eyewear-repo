@@ -1,8 +1,12 @@
 # Stage 1: Build React app
-FROM node:18 as build
+FROM node:18-alpine as build
 WORKDIR /app
-COPY package.json ./
-RUN npm install
+
+# Copy package files first to leverage Docker cache
+COPY package*.json ./
+RUN npm ci
+
+# Copy the rest of the application
 COPY . .
 RUN npm run build
 
